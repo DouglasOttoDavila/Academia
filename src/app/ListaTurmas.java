@@ -14,6 +14,14 @@ public class ListaTurmas {
 		return turmas;
 	}
 
+	public Turma getTurmas(int index) {
+		return this.turmas.get(index);
+	}
+
+	/* public Turma getBuscaTurmas(int index) {
+		return turmas.get(index);
+	} */
+
 	public void setTurmas(ArrayList<Turma> turmas) {
 		this.turmas = turmas;
 	}
@@ -32,7 +40,6 @@ public class ListaTurmas {
 
     @Override
 	public String toString() {
-		/* return "Lista de Turmas:" + Arrays.deepToString(turmas.toArray()); */
         return "Lista de Turmas: \n" + turmas;
 	}
 

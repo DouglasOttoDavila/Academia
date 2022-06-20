@@ -1,21 +1,39 @@
 package app;
 
-import java.util.ArrayList;
-
 public class Telefone {
+
+    int ddd;
+    int numero;
     
-    private ArrayList<String> telefone = new ArrayList<String>();
-
-    public Telefone(ArrayList<String> telefone) {
-        this.telefone = telefone;
+    public Telefone() {
     }
 
-    public ArrayList<String> getTelefone() {
-        return telefone;
+    public Telefone(int ddd, int numero) {
+        this.ddd = ddd;
+        this.numero = numero;
     }
 
-    public void setTelefone(ArrayList<String> telefone) {
-        this.telefone = telefone;
+    public int getDdd() {
+        return ddd;
     }
+
+    public void setDdd(int ddd) {
+        this.ddd = ddd;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    @Override
+    public String toString() {
+        return "\nTelefone: (" + ddd + ")" + numero;
+    }
+
+    
 
 }

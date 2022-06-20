@@ -50,9 +50,26 @@ public class Aluno extends Pessoa {
         this.peso = peso;
     }
 
+    public Enderecos getEnd() {
+        return end;
+    }
     public void setEnd(Enderecos end){
         this.end = end;
     }
+
+    @Override
+    public String toString() {
+        return "\nNome: " + super.getNome() 
+                + "\nData de Nascimento: " + super.getDataNasc() 
+                +  "\nAltura: " + altura + "m" 
+                + "\nPeso: " + peso +"kg"
+                + "\nCod. da Matrícula: " + codMatricula 
+                + "\nData da Matrícula: " + dataMatricula
+                + "\nTelefones: " + super.getTelefone()
+                + "\nEndereço: " + super.getEnderecos();
+    }
+
+    
 
     
 
