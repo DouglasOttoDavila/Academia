@@ -2,6 +2,7 @@ package app;
 
 public class Turma {
 
+    private int id;
     private int numAlunos;
     private String horarioAula;
     private double duracaoAula;
@@ -9,8 +10,9 @@ public class Turma {
     private String dataFinal;
     private String tipoAtividade;
 
-    public Turma(int numAlunos, String horarioAula, double duracaoAula, String dataInicial, String dataFinal,
+    public Turma(int id, int numAlunos, String horarioAula, double duracaoAula, String dataInicial, String dataFinal,
             String tipoAtividade) {
+        this.id = id;
         this.numAlunos = numAlunos;
         this.horarioAula = horarioAula;
         this.duracaoAula = duracaoAula;
@@ -20,6 +22,14 @@ public class Turma {
     }
 
     public Turma() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getNumAlunos() {
@@ -42,7 +52,7 @@ public class Turma {
         return duracaoAula;
     }
 
-    public void setDuracaoAula(int duracaoAula) {
+    public void setDuracaoAula(double duracaoAula) {
         this.duracaoAula = duracaoAula;
     }
 
@@ -72,9 +82,16 @@ public class Turma {
 
     @Override
     public String toString() {
-        return "\nData inicial:" + dataInicial + "\nData final: " + dataFinal + "\nDuração da aula: " + duracaoAula + " (horas:minutos)."
-                + "\nHorário da aula: " + horarioAula + "\nNúmero de alunos: " + numAlunos + "\nTipo de atividade: " + tipoAtividade 
-                + "\n";
+        return "\nCod. Turma: " + id
+                +"\nTipo de atividade: " + tipoAtividade 
+                + "\nData inicial: " + dataInicial 
+                + "\nData final: " + dataFinal 
+                + "\nDuração da aula: " + duracaoAula + "h"
+                + "\nHorário da aula: " + horarioAula 
+                + "\nNúmero de alunos: " + numAlunos;
+    }
+
+    public void add(Turma turma) {
     }
 
     
